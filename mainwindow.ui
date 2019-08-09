@@ -92,6 +92,12 @@
       <height>550</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(238, 238, 236);</string>
     </property>
@@ -249,6 +255,46 @@
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>220</y>
+        <width>300</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>65</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>START</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_lapTimer_startInfo">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>70</y>
+        <width>750</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Press START to start RACING!</string>
       </property>
      </widget>
     </widget>
