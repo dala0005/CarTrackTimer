@@ -171,7 +171,7 @@
        <enum>Qt::RightToLeft</enum>
       </property>
       <property name="autoFillBackground">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
       <property name="frameShape">
        <enum>QFrame::Box</enum>
@@ -225,7 +225,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="page_2_lapTimer">
-     <widget class="Line" name="line">
+     <widget class="Line" name="line_lapTimer_bottom">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -236,6 +236,19 @@
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_lapTime_back">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>480</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
       </property>
      </widget>
     </widget>

@@ -102,3 +102,8 @@ void MainWindow::on_pushButton_numOfLaps_ok_clicked()
 {
     ui->carTrackTimerPages->setCurrentIndex(1);
 }
+
+void MainWindow::on_pushButton_lapTime_back_clicked()
+{
+    ui->carTrackTimerPages->setCurrentIndex(0);
+}

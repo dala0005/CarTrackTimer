@@ -26,6 +26,8 @@ private slots:
 
     void on_pushButton_numOfLaps_ok_clicked();
 
+    void on_pushButton_lapTime_back_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
