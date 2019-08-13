@@ -94,8 +94,9 @@
     </property>
     <property name="font">
      <font>
-      <weight>50</weight>
-      <bold>false</bold>
+      <pointsize>250</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -257,7 +258,7 @@
        <string>Back</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="pushButton_laptIme_start">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -295,6 +296,29 @@
       </property>
       <property name="text">
        <string>Press START to start RACING!</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3_startAnimation">
+     <widget class="QLabel" name="label_startAnimation">
+      <property name="geometry">
+       <rect>
+        <x>436</x>
+        <y>160</y>
+        <width>391</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>250</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>

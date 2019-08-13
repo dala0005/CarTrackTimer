@@ -28,6 +28,11 @@ private slots:
 
     void on_pushButton_lapTime_back_clicked();
 
+    void on_pushButton_laptIme_start_clicked();
+
+    void countDownToStart();
+
+
 private:
     Ui::MainWindow *ui;
 };

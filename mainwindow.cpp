@@ -3,9 +3,11 @@
 #include "functions.h"
 #include <QDebug>
 #include <QDesktopWidget>
-
+#include <QTimer>
 
 quint8 numOfLaps = 1;
+quint8 countDown = 3;
+QTimer *timer1 = new QTimer();
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -45,6 +47,7 @@ MainWindow::MainWindow(QWidget *parent) :
     qDebug() << "pushButton_Quit X: " << ui->pushButton_Quit->property("X");
     ui->pushButton_Quit->setProperty("Y", 0);
     qDebug() << "pushButton_Quit Y: " << ui->pushButton_Quit->property("Y"); */
+    connect(timer1,SIGNAL(timeout()),this,SLOT(countDownToStart()));
 }
 
 MainWindow::~MainWindow()
@@ -76,6 +79,22 @@ void MainWindow::on_pushButton_numOfLaps_reset_clicked()
     ui->label_setNumOfLaps->setProperty("text", numOfLaps);
 }
 
+void MainWindow::on_pushButton_numOfLaps_ok_clicked()
+{
+    ui->carTrackTimerPages->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButton_lapTime_back_clicked()
+{
+    ui->carTrackTimerPages->setCurrentIndex(0);
+}
+
+void MainWindow::on_pushButton_laptIme_start_clicked()
+{
+    ui->carTrackTimerPages->setCurrentIndex(2);
+    timer1->start(1000);
+}
+
 void addNumOfLaps(quint8 *numOfLaps)
 {
     quint8 maxLaps = 25;
@@ -97,13 +116,16 @@ void resNumOfLaps(quint8 *numOfLaps)
     (*numOfLaps) = 1;
 }
 
-
-void MainWindow::on_pushButton_numOfLaps_ok_clicked()
+void MainWindow::countDownToStart()
 {
-    ui->carTrackTimerPages->setCurrentIndex(1);
+    if(countDown)
+    {
+        ui->label_startAnimation->setProperty("text", countDown);
+        countDown--;
+    }
+    else
+    {
+        timer1->stop();
+    }
 }
 
-void MainWindow::on_pushButton_lapTime_back_clicked()
-{
-    ui->carTrackTimerPages->setCurrentIndex(0);
-}

@@ -9,4 +9,6 @@ void subNumOfLaps(quint8 *numOfLaps);
 
 void resNumOfLaps(quint8 *numOfLaps);
 
+//void countDownToStart(quint8 startValue, quint8 endValue, quint16 delay_sec);
+
 #endif // FUNCTIONS_H
