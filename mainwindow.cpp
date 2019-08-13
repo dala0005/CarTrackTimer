@@ -7,7 +7,7 @@
 
 quint8 numOfLaps = 1;
 quint8 countDown = 3;
-QTimer *timer1 = new QTimer();
+QTimer *countdownTimer = new QTimer();
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->showFullScreen();
     this->setWindowTitle("Car Track Timer");
     ui->label_setNumOfLaps->setProperty("text", numOfLaps);
-    connect(timer1,SIGNAL(timeout()),this,SLOT(countDownToStart()));
+    connect(countdownTimer,SIGNAL(timeout()),this,SLOT(countDownToStart()));
 }
 
 MainWindow::~MainWindow()
@@ -62,7 +62,7 @@ void MainWindow::on_pushButton_lapTime_back_clicked()
 void MainWindow::on_pushButton_laptIme_start_clicked()
 {
     ui->carTrackTimerPages->setCurrentIndex(2);
-    timer1->start(1000);
+    countdownTimer->start(1000);
 }
 
 void addNumOfLaps(quint8 *numOfLaps)
@@ -95,7 +95,8 @@ void MainWindow::countDownToStart()
     }
     else
     {
-        timer1->stop();
+        countdownTimer->stop();
+        ui->carTrackTimerPages->setCurrentIndex(3);
     }
 }
 

@@ -322,6 +322,7 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="page"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
